@@ -32,11 +32,10 @@ const Tweeter = function () {
         posts.push(newPost)
     }
 
-    const getPosts = function () {
-        return posts
-    }
+    const getPosts = () => posts
 
-    const removePost = function (postID) {
+
+    const removePost = postId => {
         for (let i in posts) {
             if (posts[i].id === postID)
                 posts.splice(i, 1)
@@ -67,13 +66,7 @@ const Tweeter = function () {
         }
     }
 
-    return {
-        addPost: addPost,
-        addComment: addComment,
-        getPosts: getPosts,
-        removeComment: removeComment,
-        removePost: removePost,
-    }
+    return { addPost, addComment, getPosts, removeComment, removePost }
 }
 
 

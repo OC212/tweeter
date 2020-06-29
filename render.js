@@ -14,40 +14,13 @@ const Renderer = function () {
                 html += comment.text
                 html += '</div>'
             }
-            html += '<input class="marom"type="text" placeholder="got somthing to say?" >'
-            html += '<button class="asi">comment</button>'
+            html += '<input class="add-comment"type="text" placeholder="got somthing to say?" >'
+            html += '<button class="comment-btn">comment</button>'
             html +=  '<br><button class="delete">Delete Post</button>'
             html += '</div>'
         }
 
         $('#posts').append(html)
-    }
-
-    return {renderPosts}
-}
-
-
-
-const Renderer = function () {
-
-    const renderPosts = function (posts) {
-
-        $('#posts').empty()
-        let html = '';
-        for(let post of posts) {
-            html +=
-        }
-
-
-
-
-
-
-
-
-
-
-
     }
 
     return {renderPosts}

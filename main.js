@@ -1,4 +1,5 @@
 const tweeter = Tweeter()
+
 const renderer = Renderer()
 const posts = tweeter.getPosts()
 
@@ -16,9 +17,9 @@ $('#posts').on('click', '.delete', function () {
     renderer.renderPosts(posts)
 })
 
-$('#posts').on('click', '.asi', function () {
+$('#posts').on('click', 'comment-btn', function () {
     const postId = $(this).closest($('.post')).data().post
-    const commentText = $(this).closest($('.post')).find('.marom').val()
+    const commentText = $(this).closest($('.post')).find('.add-comment').val()
     tweeter.addComment(postId, commentText)
     renderer.renderPosts(posts)
 })
